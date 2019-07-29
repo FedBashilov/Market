@@ -1,0 +1,13 @@
+.menu_bar{
+  display: flex;
+  flex-direction: row;
+}
+
+.menu_item{
+  margin: 5px;
+  cursor: pointer;
+}
+
+.main_title{
+  text-align: center;
+}
