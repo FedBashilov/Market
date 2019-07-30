@@ -1,0 +1,35 @@
+.menu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  background: #FFF;
+  z-index: 99;
+}
+.menu_list{
+  display: flex;
+  flex-direction: column;
+}
+.show{
+  transform: translateX(0%);
+}
+
+.menu_item{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+.burger_icon{
+  position: absolute;
+  right: -35px;
+  top: 10px;
+  margin: 10px;
+  z-index: 100;
+}

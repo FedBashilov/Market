@@ -1,0 +1,21 @@
+.wrapper{
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+  position: relative;
+  background: #fff0ad;
+  z-index: 0;
+}
+.moved{
+  opacity: 0.6;
+  transform: translateX(30%);
+}
