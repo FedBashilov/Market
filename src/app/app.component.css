@@ -1,21 +1,88 @@
 .wrapper{
+  font-style: italic;
   position: relative;
   overflow-x: hidden;
 }
 
+.curtain{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: #000;
+  transition:  opacity 0.5s;
+
+}
+.curtain.off{
+  z-index: 0;
+  opacity: 0;
+}
+.curtain.on{
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.header{
+  background: #FFF;
+  padding: 10px 30px;
+}
+
+.main_title{
+  text-align: center;
+  font-size: 2em;
+}
 
 .content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  width: 100%;
   transition: 0.5s;
   position: relative;
-  background: #fff0ad;
-  z-index: 0;
+  z-index: 1;
 }
-.moved{
-  opacity: 0.6;
+.content.moved{
   transform: translateX(30%);
+}
+
+
+.line-menu{
+  display: none;
+}
+
+.menu_item{
+  cursor: pointer;
+  transition: 0.1s;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px;
+}
+.menu_item:hover{
+  color: #777;
+}
+
+.current{
+  border-bottom: 2px solid orange;
+}
+
+
+
+@media all and (min-width: 800px) {
+  app-moving-menu{
+    display: none;
+  }
+
+  .line-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .content.moved{
+    transform: translateX(0%);
+  }
+
+  .curtain.on{
+    opacity: 0;
+  }
 }

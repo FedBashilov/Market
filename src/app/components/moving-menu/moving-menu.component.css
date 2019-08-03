@@ -1,35 +1,90 @@
 .menu{
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 30%;
-  height: 100vh;
+  left: 0; top: 0;
+  width: 30%; height: 100%;
+  background: #FFF;
+  z-index: 100;
   transform: translateX(-100%);
   transition: 0.5s;
-  background: #FFF;
-  z-index: 99;
 }
-.menu_list{
-  display: flex;
-  flex-direction: column;
-}
-.show{
+.menu.show{
   transform: translateX(0%);
 }
 
+.menu_list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.menu_item_wrapper{
+  position: relative;
+  margin: 20px;
+}
+
 .menu_item{
+  position: absolute;
+  left: 0; top: 0;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 20px;
   font-weight: 600;
-  margin: 5px;
   cursor: pointer;
+  transition: 0.1s;
+  color: #000;
+}
+.menu_item:hover{
+  font-size: 25px;
 }
 
 
-.burger_icon{
+
+/*icon animation*/
+.icon_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: -35px;
-  top: 10px;
-  margin: 10px;
+  right: -40px; top: 0px;
+  width: 40px; height: 40px;
+  background: #FFF;
+  border-bottom-right-radius: 22px;
+  cursor: pointer;
   z-index: 100;
+}
+
+.icon{
+  transition: 0.5s;
+  transform-origin: center center;
+}
+
+.b_line1, .b_line2, .b_line3{
+  height: 3px; width: 20px;
+  background: #000;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.b_line1, .b_line3{
+  transform-origin: left center;
+}
+.b_line2{
+  margin: 4px 0;
+}
+
+.icon.burger{
+  transform: rotate(-360deg);
+}
+.icon.сross{
+  transform: rotate(360deg);
+}
+
+.icon.cross .b_line1{
+  transform: rotate(45deg);
+}
+.icon.cross .b_line2{
+  opacity: 0;
+}
+.icon.cross .b_line3{
+  transform: rotate(-45deg);
 }

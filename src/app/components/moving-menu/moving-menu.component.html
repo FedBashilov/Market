@@ -1,20 +1,31 @@
 <div class="menu">
   <nav class="menu_list">
-    <a href="#" class="menu_item">
-      Главная
-    </a>
-    <a href="#" class="menu_item">
-      Магазин
-    </a>
-    <a href="#" class="menu_item">
-      О нас
-    </a>
-    <a href="#" class="menu_item">
-      Контакты
-    </a>
+    <div class="menu_item_wrapper">
+      <a href="#" class="menu_item">
+        Главная
+      </a>
+    </div>
+    <div class="menu_item_wrapper">
+      <a href="#" class="menu_item">
+        Магазин
+      </a>
+    </div>
+    <div class="menu_item_wrapper">
+      <a href="#" class="menu_item">
+        О нас
+      </a>
+    </div>
+    <div class="menu_item_wrapper">
+      <a href="#" class="menu_item">
+        Контакты
+      </a>
+    </div>
   </nav>
-
-  <div class="burger_icon" (click)="change()">
-    &#9776;
+  <div class="icon_wrapper">
+    <div class="icon burger" (click)="change()">
+      <div class="b_line1"></div>
+      <div class="b_line2"></div>
+      <div class="b_line3"></div>
+    </div>
   </div>
 </div>

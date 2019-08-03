@@ -1,19 +1,31 @@
 <div class="wrapper">
   <app-moving-menu (onChanged)="showOrHideMenu($event)"></app-moving-menu>
 
+  <div class="curtain off" (click)="showOrHideMenu($event)">
+  </div>
 
   <div class="content">
-    <div class="main_title">
-      Тимати Блэк Стар Маркет
+    <div class="header">
+      <nav class="line-menu">
+        <a href="#" class="menu_item current">
+          Главная
+        </a>
+        <a href="#" class="menu_item">
+          Магазин
+        </a>
+        <a href="#" class="menu_item">
+          О нас
+        </a>
+        <a href="#" class="menu_item">
+          Контакты
+        </a>
+      </nav>
+
+      <div class="main_title">
+        Тимати Блэк Стар Маркет
+      </div>
     </div>
-      типо содержимое
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
-      <p>weg</p>
+
+    <router-outlet></router-outlet>
   </div>
 </div>
