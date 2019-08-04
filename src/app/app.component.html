@@ -7,16 +7,16 @@
   <div class="content">
     <div class="header">
       <nav class="line-menu">
-        <a href="#" class="menu_item current">
+        <a class="menu_item current" (click)="router.navigate(['home']); setCurrent($event);">
           Главная
         </a>
-        <a href="#" class="menu_item">
-          Магазин
+        <a class="menu_item" (click)="router.navigate(['portfolio']); setCurrent($event);">
+          Портфолио
         </a>
-        <a href="#" class="menu_item">
+        <a class="menu_item" (click)="router.navigate(['about-us']); setCurrent($event);">
           О нас
         </a>
-        <a href="#" class="menu_item">
+        <a class="menu_item" (click)="router.navigate(['contacts']); setCurrent($event);">
           Контакты
         </a>
       </nav>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-moving-menu',
@@ -8,12 +9,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MovingMenuComponent implements OnInit {
   @Output() onChanged = new EventEmitter<boolean>();
 
-  constructor() { }
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
   }
-
-
 
   change() {
       this.onChanged.emit();

@@ -1,22 +1,22 @@
 <div class="menu">
   <nav class="menu_list">
     <div class="menu_item_wrapper">
-      <a href="#" class="menu_item">
+      <a class="menu_item" (click)="router.navigate(['home']); change();">
         Главная
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a href="#" class="menu_item">
-        Магазин
+      <a class="menu_item" (click)="router.navigate(['portfolio']); change();">
+        Портфолио
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a href="#" class="menu_item">
+      <a class="menu_item" (click)="router.navigate(['about-us']); change();">
         О нас
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a href="#" class="menu_item">
+      <a class="menu_item" (click)="router.navigate(['contacts']); change();">
         Контакты
       </a>
     </div>

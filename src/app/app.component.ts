@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'market name';
 
+  constructor(private router: Router) {
+  }
+
+
+  setCurrent(event: any){
+      let current: any = document.getElementsByClassName("current")[0];
+      current.classList.remove("current");
+      event.currentTarget.classList.add("current");
+  }
 
   showOrHideMenu(){
     let menu: any = document.getElementsByClassName("menu")[0];
