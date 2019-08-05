@@ -1,31 +1,11 @@
 <div class="wrapper">
-  <app-moving-menu (onChanged)="showOrHideMenu($event)"></app-moving-menu>
 
-  <div class="curtain off" (click)="showOrHideMenu($event)">
+  <div class="header">
+    <app-moving-menu (onChanged)="moveContent($event)"></app-moving-menu>
   </div>
 
   <div class="content">
-    <div class="header">
-      <nav class="line-menu">
-        <a class="menu_item current" (click)="router.navigate(['home']); setCurrent($event);">
-          Главная
-        </a>
-        <a class="menu_item" (click)="router.navigate(['portfolio']); setCurrent($event);">
-          Портфолио
-        </a>
-        <a class="menu_item" (click)="router.navigate(['about-us']); setCurrent($event);">
-          О нас
-        </a>
-        <a class="menu_item" (click)="router.navigate(['contacts']); setCurrent($event);">
-          Контакты
-        </a>
-      </nav>
-
-      <div class="main_title">
-        Тимати Блэк Стар Маркет
-      </div>
-    </div>
-
     <router-outlet></router-outlet>
   </div>
+
 </div>
