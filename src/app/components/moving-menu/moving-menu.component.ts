@@ -10,7 +10,7 @@ export class MovingMenuComponent implements OnInit {
   @Output() onChanged = new EventEmitter<boolean>();
 
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
   }
 
   ngOnInit() {

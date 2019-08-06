@@ -1,11 +1,25 @@
 <div class="wrapper">
 
-  <div class="header">
-    <app-moving-menu (onChanged)="moveContent($event)"></app-moving-menu>
-  </div>
+  <header>
+    <app-moving-menu (onChanged)="moveContent()"></app-moving-menu>
+  </header>
 
   <div class="content">
-    <router-outlet></router-outlet>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+      <div>
+        Made by FedoZ
+      </div>
+      <div>
+        Version 0.9.1 <br>
+        07.08.2019
+      </div>
+    </footer>
+
   </div>
 
 </div>

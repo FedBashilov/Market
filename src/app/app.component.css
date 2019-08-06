@@ -1,12 +1,13 @@
 .wrapper{
-  font-style: italic;
+  font-size: 14px;
   position: relative;
   overflow-x: hidden;
 }
 
-.header{
+header{
   background: #FFF;
   padding: 10px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .content{
@@ -16,13 +17,20 @@
   z-index: 1;
 }
 .content.moved{
-  transform: translateX(30%);
+  transform: translateX(280px);
 }
 
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
 
 
 @media all and (min-width: 800px) {
   .content.moved{
-    transform: translateX(0%);
+    transform: translateX(0px);
   }
 }

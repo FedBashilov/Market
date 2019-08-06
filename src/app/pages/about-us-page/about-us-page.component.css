@@ -1,10 +1,10 @@
-.section_autobiography{
-
+img {
+  display: block;
 }
 
 .back_photo{
   position: relative;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .back_photo::before {
   content: '';
@@ -20,20 +20,17 @@
 .content_autobiography{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%);
-
+  left: 25%; top: 45%;
+  transform: translateX(-25%);
 }
 
 .photo_wrapper{
-  width: 100%;
   margin-right: 10px;
 }
 
 .content_text{
   color: #FFF;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
 }
