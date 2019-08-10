@@ -10,6 +10,7 @@ import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.compon
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
     AboutUsPageComponent,
     HomePageComponent,
     PortfolioPageComponent,
-    ContactsPageComponent
+    ContactsPageComponent,
+    ProductListComponent
   ],
   imports: [
     AppRoutingModule,
