@@ -1,22 +1,22 @@
 <div class="moving_menu">
   <nav class="menu_list">
     <div class="menu_item_wrapper">
-      <a class="menu_item" (click)="router.navigate(['home']); showOrHideMenu(); setCurrent(0);">
+      <a class="menu_item" routerLink="/home" (click)="showOrHideMenu()">
         Главная
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a class="menu_item" (click)="router.navigate(['portfolio']); showOrHideMenu(); setCurrent(1);">
+      <a class="menu_item" routerLink="/portfolio" (click)="showOrHideMenu()">
         Портфолио
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a class="menu_item" (click)="router.navigate(['about-us']); showOrHideMenu(); setCurrent(2);">
+      <a class="menu_item" routerLink="/about-us" (click)="showOrHideMenu()">
         О нас
       </a>
     </div>
     <div class="menu_item_wrapper">
-      <a class="menu_item" (click)="router.navigate(['contacts']); showOrHideMenu(); setCurrent(3);">
+      <a class="menu_item" routerLink="/contacts" (click)="showOrHideMenu()">
         Контакты
       </a>
     </div>
@@ -35,16 +35,16 @@
 
 <div class="line-header">
   <nav class="line-menu">
-    <a class="line_menu_item current" (click)="router.navigate(['home']); setCurrent(0);">
+    <a class="line_menu_item current" routerLink="/home">
       Главная
     </a>
-    <a class="line_menu_item" (click)="router.navigate(['portfolio']); setCurrent(1);">
+    <a class="line_menu_item" routerLink="/portfolio">
       Портфолио
     </a>
-    <a class="line_menu_item" (click)="router.navigate(['about-us']); setCurrent(2);">
+    <a class="line_menu_item" routerLink="/about-us">
       О нас
     </a>
-    <a class="line_menu_item" (click)="router.navigate(['contacts']); setCurrent(3);">
+    <a class="line_menu_item" routerLink="/contacts">
       Контакты
     </a>
   </nav>

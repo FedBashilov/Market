@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-moving-menu',
@@ -9,22 +9,45 @@ import { Router } from '@angular/router';
 export class MovingMenuComponent implements OnInit {
   @Output() onChanged = new EventEmitter<boolean>();
 
-
   constructor(public router: Router) {
+
+    let lineMenuItems: any = null;
+    let current: any = null;
+
+    router.events.subscribe((event: RouterEvent) =>{
+      if(event instanceof NavigationEnd){
+
+        lineMenuItems = document.getElementsByClassName("line_menu_item");
+        current = document.getElementsByClassName("current")[0];
+
+        current.classList.remove("current");
+
+        switch (router.url) {
+          case "/home":
+            lineMenuItems[0].classList.add("current");
+            break;
+          case "/portfolio":
+            lineMenuItems[1].classList.add("current");
+            break;
+          case "/about-us":
+            lineMenuItems[2].classList.add("current");
+            break;
+          case "/contacts":
+            lineMenuItems[3].classList.add("current");
+            break;      
+          default:
+            break;
+        }
+
+      }
+    });
   }
 
   ngOnInit() {
   }
 
   change() {
-      this.onChanged.emit();
-  }
-
-  setCurrent(indexOfChosen: number){
-    let current: any = document.getElementsByClassName("current")[0];
-    let chosen: any = document.getElementsByClassName("line_menu_item")[indexOfChosen];
-    current.classList.remove("current");
-    chosen.classList.add("current");
+    this.onChanged.emit();
   }
 
   showOrHideMenu(){
@@ -49,7 +72,7 @@ export class MovingMenuComponent implements OnInit {
       icon.classList.add("cross");
     }
 
-     this.change();
+    this.change();
   }
 
 }
