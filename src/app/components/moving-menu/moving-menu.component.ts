@@ -17,16 +17,18 @@ export class MovingMenuComponent implements OnInit {
     router.events.subscribe((event: RouterEvent) =>{
       if(event instanceof NavigationEnd){
 
-        lineMenuItems = document.getElementsByClassName("line_menu_item");
         current = document.getElementsByClassName("current")[0];
+        lineMenuItems = document.getElementsByClassName("line_menu_item");
 
-        current.classList.remove("current");
+        if( current ){
+          current.classList.remove("current");
+        }
 
         switch (router.url) {
           case "/home":
             lineMenuItems[0].classList.add("current");
             break;
-          case "/portfolio":
+          case "/shop":
             lineMenuItems[1].classList.add("current");
             break;
           case "/about-us":

@@ -14,7 +14,7 @@ export class AppComponent {
 
   moveContent(){
     let content: any = document.getElementsByClassName("content")[0];
-    if(content.classList.contains("moved")){
+    if( content.classList.contains("moved") ){
       content.classList.remove("moved");
     } else {
       content.classList.add("moved");
