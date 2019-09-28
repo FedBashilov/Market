@@ -5,5 +5,5 @@ export class Product{
   public description: string = null;
   public price: number = null;
   public available: number = null;
-  public photos: Array<string> = null;
+  public photos: Array<string> = new Array();
 }
