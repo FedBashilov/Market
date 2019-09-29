@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'market name';
 
+
+  audioFlag: boolean = false;
+
   constructor(private router: Router) {
   }
 
@@ -18,6 +21,20 @@ export class AppComponent {
       content.classList.remove("moved");
     } else {
       content.classList.add("moved");
+    }
+  }
+
+  play(){
+    if(!this.audioFlag){
+      let id = setInterval(() => {
+
+        let audio = new Audio();
+        audio.src = '/assets/audio/music.mp3';
+        audio.load();
+        audio.play();
+        audio.playbackRate = Math.random() * Math.floor(2);
+        audio.volume = Math.random();
+      }, 8000);
     }
   }
 
