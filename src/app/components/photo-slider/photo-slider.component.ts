@@ -13,7 +13,7 @@ export class PhotoSliderComponent implements OnInit {
 
   @Input() product: Product ;
 
-  constructor(private apiService: ApiService) { }
+  constructor(public apiService: ApiService) { }
 
   ngOnInit() {
   }

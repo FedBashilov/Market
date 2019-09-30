@@ -12,8 +12,8 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getProducts(): Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.PHP_API_SERVER}/products`);
+  getAllProductsId(): Observable<number[]>{
+    return this.httpClient.get<number[]>(`${this.PHP_API_SERVER}/products`);
   }
 
   getProductById(id : number): Observable<Product>{

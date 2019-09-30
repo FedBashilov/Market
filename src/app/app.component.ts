@@ -24,19 +24,4 @@ export class AppComponent {
     }
   }
 
-  play(){
-    if(!this.audioFlag){
-      let id = setInterval(() => {
-
-        let audio = new Audio();
-        audio.src = '/assets/audio/music.mp3';
-        audio.load();
-        audio.play();
-        audio.playbackRate = Math.random() * Math.floor(2);
-        audio.volume = Math.random();
-      }, 8000);
-    }
-  }
-
-
 }

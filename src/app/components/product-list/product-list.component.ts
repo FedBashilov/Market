@@ -9,14 +9,21 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-	public products: Array<Product> = [];
+	public allProductsId: number[] = [];
+	public allProducts: Product[] = [];
 
 	constructor(private apiService: ApiService) { }
 
 	ngOnInit() {
-		this.apiService.getProducts().subscribe((products: Product[])=>{
-	  		this.products = products;
-  		})
+		this.apiService.getAllProductsId().subscribe((allProductsId: number[])=>{
+	  		this.allProductsId = allProductsId;
+	  		this.allProductsId.forEach( (productId)=>{
+	  			this.apiService.getProductById(productId).subscribe((product: Product) => {
+	  				this.allProducts.push(product);
+	  			});
+	  		});
+	  		
+  		});
 	}
 
 }
