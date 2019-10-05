@@ -8,9 +8,13 @@ import { Product } from 'src/app/models/product.model';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
+
+
 export class ProductListComponent implements OnInit {
 	public allProductsId: number[] = [];
 	public allProducts: Product[] = [];
+
 
 	constructor(private apiService: ApiService) { }
 
@@ -27,3 +31,4 @@ export class ProductListComponent implements OnInit {
 	}
 
 }
+

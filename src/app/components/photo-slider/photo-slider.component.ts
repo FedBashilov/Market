@@ -11,7 +11,8 @@ import { Product } from 'src/app/models/product.model';
 })
 export class PhotoSliderComponent implements OnInit {
 
-  @Input() product: Product ;
+  @Input() product: Product;
+  public curPhotoIndex: number = 0;
 
   constructor(public apiService: ApiService) { }
 
@@ -20,5 +21,15 @@ export class PhotoSliderComponent implements OnInit {
 
   pressed(e){
   	console.log("pressed");
+  }
+
+  changeImage( moveTo: number){
+    this.curPhotoIndex += moveTo;
+    if( this.curPhotoIndex < 0 ){
+      this.curPhotoIndex = this.product.photos.length - 1;
+    }
+    if( this.curPhotoIndex == this.product.photos.length){
+      this.curPhotoIndex = 0;
+    }
   }
 }

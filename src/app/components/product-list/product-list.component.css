@@ -14,10 +14,14 @@
 .product:hover{
 	transform: scale(1.05, 1.05);
 }
+.product:focus{
+	outline: none;
+}
 
 .product_image{
 	height: 400px;
 	width: 100%;
+	border-radius: 15px 15px 0 0 ;
 }
 
 .product_prize{

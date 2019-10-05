@@ -8,7 +8,7 @@ import { Product } from  './../models/product.model';
   providedIn: 'root'
 })
 export class ApiService {
-  PHP_API_SERVER = "https://tiimofeystore.000webhostapp.com";
+  public PHP_API_SERVER = "https://tiimofeystore.000webhostapp.com";
 
   constructor(private httpClient: HttpClient) {}
 
