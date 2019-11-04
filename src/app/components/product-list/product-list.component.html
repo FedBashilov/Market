@@ -1,12 +1,12 @@
 <div class="wrapper">
 	<div class="product" *ngFor="let product of allProducts; index as i;" [routerLink]="['product', product.id_product]">
 		<div>
-			<img class="product_image" [defaultImage]="'assets/images/sleep.jpg'" [lazyLoad]='this.apiService.PHP_API_SERVER+"/backend/product_photos/"+product.photos[0]'>
+			<img class="product_image" [defaultImage]="'assets/images/loading.gif'" [lazyLoad]='this.apiService.PHP_API_SERVER+"/backend/product_photos/"+product.photos[0]'>
 		</div>
 		<div class="product_prize">
-			{{product.price}} p.
+			{{product.price}} rub
 		</div>
-		<div class="product_name">
+		<div class="product_name notranslate">
 			{{product.name}}
 		</div>
 		<div class="product_description">
